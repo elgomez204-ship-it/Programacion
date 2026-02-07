@@ -1,0 +1,5 @@
+<?php
+	// ESPERA QUE EN LA URL HAYA UN PARAMETRO LLAMADO NOMBRE
+	echo $_GET['nombre'];
+?>
+

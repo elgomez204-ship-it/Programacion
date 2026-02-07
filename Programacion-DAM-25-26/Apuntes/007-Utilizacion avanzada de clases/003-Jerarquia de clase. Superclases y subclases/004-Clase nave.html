@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #nave{position:absolute;width:100px;}
+        </style>
+    </head>
+    <body>
+        <img src="nave.png" id="nave">
+    </body>
+    <script>
+        // PRIMERO DECLARAMOS UNA CLASE
+        class Jugador{
+            constructor(x,y){
+                this.posx = x;
+                this.posy = y;
+            }
+        }
+        // AHORA CREO UNA INSTANCIA DEL JUGADOR
+        let InstanciaJugador = new Jugador(40,40)
+        let nave = document.querySelector("#nave");
+
+        document.onkeydown = function(tecla){       // CUANDO PULSE TECLA SOBRE EL DOCUMENTO
+            console.log(tecla)
+            // W = 87, S = 83, A = 65 , D = 68
+            switch(tecla.keyCode){                                                                                                                                                                                                                                                                                                                                                                                                          
+                case 87:                // SI PULSO W                
+                    InstanciaJugador.posy -= 5;            // SUBO 5 UNIDADES EN Y
+                    console.log("aqui entro")
+                    break;
+
+                case 83:                // SI PULSO S
+                    InstanciaJugador.posy += 5;            // BAJO 5 UNIDADES EN Y
+                    break;
+
+                case 65:                // SI PULSO A
+                    InstanciaJugador.posx -= 5;            // BAJO 5 UNIDADES EN X
+                    break;
+
+                case 68:
+                    InstanciaJugador.posx += 5;            // SI PULSO D                                                                                       
+                    break               // SUBO 5 UNIDADES EN X
+            }
+            nave.style.left = InstanciaJugador.posx+"px";
+            nave.style.top = InstanciaJugador.posy+"px";                                                                                                                                       
+        }
+    </script>
+</html>

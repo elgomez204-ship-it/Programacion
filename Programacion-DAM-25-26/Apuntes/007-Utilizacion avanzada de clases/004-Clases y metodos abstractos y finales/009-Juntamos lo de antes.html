@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<title>[Titulo]</title>
+		<meta charset="UTF-8">
+		<style>
+			#rojo{
+				width:50px; height:50px; background:orangered; border:1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="rojo"></div>
+		<script>
+			// DEFINO CONDICIONES DE INICIO //
+			let posx = 0;
+			let posy = 0;
+			document.onkeydown = function(tecla){
+				switch(tecla.key){
+					case "w":
+						posy -= 10; // RESTAMOS 10 EN Y //
+						console.log("Movemos el personaje hacia arriba");
+						break;
+					case "s":
+						posy += 10; // SUMAMOS 10 EN Y //
+						console.log("Movemos el personaje hacia abajo");
+						break;
+					case "a":
+						posx -= 10; // RESTAMOS 10 EN X //
+						console.log("Movemos el personaje hacia la izquierda");
+						break;
+					case "d":
+						posx += 10; // SUMAMOS 10 EN X //
+						console.log("Movemos el personaje hacia la derecha");
+						break;
+				}
+				document.querySelector("#rojo").style.transform = "translate("+posx+"px,"+posy+"px)"
+			}
+			document.onmousedown = function(){
+				console.log("Disparamos");
+			}
+		</script>
+	</body>
+</html>

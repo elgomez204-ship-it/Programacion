@@ -1,0 +1,85 @@
+/* Variables para facilitar cambios de color */
+:root {
+    --bg-body: #1e1e2e;      /* Fondo oscuro azulado */
+    --bg-card: #2a2a3c;      /* Fondo de los artículos */
+    --text-main: #c9d1d9;    /* Texto gris claro */
+    --accent: #00f2ff;       /* Cian neón tecnológico */
+    --border: #44475a;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Títulos con fuente tipo consola/código */
+h1, h2, h3 {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header, main, footer {
+    max-width: 1200px; 
+    width: 90%;
+    margin: 40px auto;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5); /* Efecto neón */
+}
+
+header h2 {
+    font-size: 1rem;
+    color: var(--accent);
+    margin-top: 5px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Aquí está el cambio: 3 columnas de igual tamaño */
+    gap: 30px;
+}
+
+/* Estilo para los artículos generados por el PHP */
+/* Asumimos que son divs o articles hijos directos del main */
+main > * {
+    background-color: var(--bg-card);
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+main > *:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    border-color: var(--accent);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+}
+

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<title>[Titulo]</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+			class Ser{									// ABSTRACTO IMPLICITO, NO TIENE SENTIDO INSTANCIA
+				constructor(edad){
+					this.edad = edad;
+				}
+			}
+			class Animal extends Ser{					// ABSTRACTO IMPLICITO, NO TIENE SENTIDO INSTANCIA
+				constructor(especie){
+					super();
+					this.especie = especie;
+				}
+			}
+			class Perro extends Animal{					// CONCRETO, TIENE SENTIDO INSTANCIAR
+				constructor(color){
+					super();
+					this.color = color;
+				}
+			}
+			let Perro1 = new Perro("blanco");
+			console.log(Perro1);
+		</script>
+	</body>
+</html>

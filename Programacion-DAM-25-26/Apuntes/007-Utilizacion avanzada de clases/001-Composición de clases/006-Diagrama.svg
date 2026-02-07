@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="757.6562064034597" height="360.82814897809703" viewBox="0 0 757.6562064034597 360.82814897809703">
+
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: #111827; }
+      .shape-rect { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-entity { fill: #ffffff; stroke: #111827; stroke-width: 2; }
+      .shape-circle { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-pill { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-db { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .conn { stroke: #111827; stroke-width: 2; fill: none; }
+    </style>
+    <marker id="arrow-end" markerWidth="10" markerHeight="7" refX="10" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#111827"/>
+    </marker>
+    <marker id="arrow-start" markerWidth="10" markerHeight="7" refX="0" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#111827"/>
+    </marker>
+  </defs>
+        
+<rect class="shape-rect" x="226.99999128069192" y="40" width="119.99999999999997" height="39.999989100864944" rx="4" ry="4" />
+<text x="286.9999912806919" y="63.999994550432476" text-anchor="middle">Persona</text>
+<rect class="shape-rect" x="40" y="174.99998910086492" width="119.99999999999997" height="39.99999999999999" rx="4" ry="4" />
+<text x="99.99999999999999" y="198.99998910086492" text-anchor="middle">Profesor</text>
+<rect class="shape-rect" x="438.99993896484364" y="153.99999346051894" width="119.99999999999997" height="39.99999999999999" rx="4" ry="4" />
+<text x="498.99993896484364" y="177.99999346051894" text-anchor="middle">Alumno</text>
+<rect class="shape-rect" x="333.65622384207586" y="280.82810538155684" width="126.93743024553568" height="40.000043596540166" rx="4" ry="4" />
+<text x="397.1249389648437" y="304.82812717982694" text-anchor="middle">AlumnoPresencial</text>
+<rect class="shape-rect" x="597.6562064034597" y="279.32812282017295" width="119.99999999999997" height="39.99999999999999" rx="4" ry="4" />
+<text x="657.6562064034597" y="303.32812282017295" text-anchor="middle">AlumnoOnline</text>
+<path class="conn" d="M 324.192954779921 79.99998910086495 L 461.80696533133346 153.99999346051894" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 259.29629529907766 79.99998910086495 L 127.70370353027437 174.99998910086492" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 482.9348914060005 193.99999346051894 L 413.1900040331991 280.82810538155684" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 524.3184797025451 193.99999346051894 L 632.3376656657582 279.32812282017295" marker-end="url(#arrow-end)" />
+</svg>

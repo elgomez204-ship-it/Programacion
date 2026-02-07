@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #nave{position:absolute;width:100px;}
+        </style>
+    </head>
+    <body>
+        <img src="nave.png" id="nave">
+    </body>
+    <script>
+        let nave = document.querySelector("#nave");
+        let posx = 40;
+        let posy = 40;
+
+        document.onkeydown = function(tecla){       // CUANDO PULSE TECLA SOBRE EL DOCUMENTO
+            console.log(tecla)
+            // w = 87, s = 83, a = 65 , d = 68
+            switch(tecla.keyCode){                                                                                                                                                                                                                                                                                                                                                                                                          
+                case 87:                // SI PULSO W                
+                    posy -= 5;            // SUBO 5 UNIDADES EN Y
+                    break;
+
+                case 83:                // SI PULSO S
+                    posy += 5;            // BAJO 5 UNIDADES EN Y
+                    break;
+
+                case 65:                // SI PULSO A
+                    posx -= 5;            // BAJO 5 UNIDADES EN X
+                    break;
+
+                case 68:
+                    posx += 5;            // SI PULSO D                                                                                       
+                    break               // SUBO 5 UNIDADES EN X
+            }
+            nave.style.left = posx+"px";
+            nave.style.top = posy+"px";                                                                                                                                       
+        }
+    </script>
+</html>
