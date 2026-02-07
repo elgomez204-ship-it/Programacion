@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<title>[Titulo]</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+			let temporizador = setTimeout("bucle()",1000);			// DENTRO DE 1SEG ENTRA EN EL BUCLE //
+			function bucle(){
+				console.log("hola");
+				clearTimeout(temporizador);							// BORRO EL TEMPORIZADOR ANTERIOR //
+				temporizador = setTimeout("bucle()",1000);			// LLAMADA RECURSIVA //
+			}
+		</script>
+	</body>
+</html>

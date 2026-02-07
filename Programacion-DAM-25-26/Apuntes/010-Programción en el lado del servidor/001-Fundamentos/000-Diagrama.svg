@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="401.92186438519" height="336.04685907778526" viewBox="0 0 401.92186438519 336.04685907778526">
+
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: #111827; }
+      .shape-rect { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-entity { fill: #ffffff; stroke: #111827; stroke-width: 2; }
+      .shape-circle { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-pill { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-db { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .conn { stroke: #111827; stroke-width: 2; fill: none; }
+    </style>
+    <marker id="arrow-end" markerWidth="10" markerHeight="7" refX="10" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#111827"/>
+    </marker>
+    <marker id="arrow-start" markerWidth="10" markerHeight="7" refX="0" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#111827"/>
+    </marker>
+  </defs>
+        
+<rect class="shape-rect" x="40.76559315557063" y="197.03124999999991" width="119.99999999999994" height="39.99999999999998" rx="4" ry="4" />
+<text x="100.7655931555706" y="221.03124999999991" text-anchor="middle">PHP</text>
+<rect class="shape-rect" x="40" y="155.89063561480972" width="119.99999999999994" height="39.99999999999998" rx="4" ry="4" />
+<text x="99.99999999999997" y="179.89063561480972" text-anchor="middle">HTML</text>
+<rect class="shape-rect" x="238.0312181555705" y="40" width="119.99999999999994" height="39.99999999999998" rx="4" ry="4" />
+<text x="298.0312181555705" y="63.999999999999986" text-anchor="middle">HTML</text>
+<rect class="shape-rect" x="238.45310377038038" y="81.29686438519019" width="119.99994692595102" height="39.99999999999998" rx="4" ry="4" />
+<text x="298.4530772333559" y="105.29686438519018" text-anchor="middle">JS</text>
+<ellipse class="shape-circle" cx="300.624946925951" cy="183.9062499999999" rx="59.99999999999997" ry="39.99999999999998" />
+<text x="300.624946925951" y="187.9062499999999" text-anchor="middle">JSON</text>
+<rect class="shape-rect" x="241.92186438519013" y="256.04685907778526" width="119.99999999999994" height="39.99999999999998" rx="4" ry="4" />
+<text x="301.92186438519013" y="280.04685907778526" text-anchor="middle">PHP</text>
+<path class="conn" d="M 301.64035605304 256.04685907778514 L 301.18796359025123 223.90624999999991" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 299.5733135424408 143.90624999999991 L 298.97889392511104 121.29686438519016" marker-end="url(#arrow-end)" />
+</svg>

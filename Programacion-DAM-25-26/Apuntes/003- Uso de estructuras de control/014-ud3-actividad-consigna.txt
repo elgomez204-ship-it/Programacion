@@ -1,0 +1,14 @@
+# Escribir pseudocodigo
+
+recorrer años de produccion 2000 a 2025
+meses del año 1 al 12
+dias del mes 1 al 30
+
+cada dia mensaje cuantos patitos de goma se ha fabricado ese dia
+
+adic
+cada dia 10 patitos de goma
+mensajes como
+dia 5 del mes 3 del año 2010: 10 patitos de goma fabricados
+
+al terminar el bucle debe mostrar el total de patitos fabricados en el periodo

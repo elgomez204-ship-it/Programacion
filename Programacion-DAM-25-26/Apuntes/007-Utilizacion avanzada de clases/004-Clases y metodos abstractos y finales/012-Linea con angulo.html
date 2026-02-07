@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<title>[Titulo]</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<canvas></canvas>
+		<script>
+			let lienzo = document.querySelector("canvas");		// ATRAPO EL CANVAS //
+			lienzo.width = 512;									// LE PONGO ANCHURA //
+			lienzo.height = 512;								// LE PONGO ALTURA //
+			let contexto = lienzo.getContext("2d");				// VOY A DIBUJAR EN 2D //
+			
+			// AHORA VOY A DIBUJAR UN CIRCULO //
+			contexto.beginPath();								// EMPIEZO A DIBUJAR //
+			// ARCO = xinicial, yinicial, radio, anguloinicial, angulofinal //
+			contexto.arc(256,256,200,0,Math.PI*2)
+			contexto.stroke();									// DIBUJO LA LINEA //
+			
+			// AHORA VOY A DIBUJAR UNA LINEA //
+			contexto.beginPath();								// EMPIEZO A DIBUJAR //		
+			contexto.moveTo(0,256);								// MUEVO EL CURSOR SIN DIBUJAR //
+			contexto.lineTo(512,256);							// MUEVO EL CURSOR YA DIBUJANDO //
+			contexto.stroke()									// REALIZO EL TRAZO //
+		
+			// AHORA VOY A DIBUJAR UNA LINEA VERTICAL //
+			contexto.beginPath();								// EMPIEZO A DIBUJAR //		
+			contexto.moveTo(256,0);								// MUEVO EL CURSOR SIN DIBUJAR //
+			contexto.lineTo(256,512);							// MUEVO EL CURSOR YA DIBUJANDO //
+			contexto.stroke()									// REALIZO EL TRAZO //
+		
+			let angulo = 1;
+			contexto.beginPath();								// EMPIEZO A DIBUJAR //		
+			contexto.moveTo(256,256);							// MUEVO EL CURSOR SIN DIBUJAR //
+			contexto.lineTo(
+				256+200*Math.cos(angulo),
+				256+200*Math.sin(angulo)
+			);													// MUEVO EL CURSOR YA DIBUJANDO //
+			contexto.stroke()									// REALIZO EL TRAZO //
+		</script>
+	</body>
+</html>

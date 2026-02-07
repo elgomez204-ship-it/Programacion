@@ -1,0 +1,73 @@
+import pickle
+
+class Cliente():
+	def __init__(self,nombre, apellidos,email):
+		self.nombre = nombre
+		self.apellidos = apellidos
+		self.email = email
+	
+print("#######Gestion de clientes v0.1######")
+print("#####Valentin Antonio De Gennaro#####")
+
+clientes = []
+
+try: ## OJO QUE IGUAL NO EXISTE EL ARCHIVO ##
+	archivo = open("clientes.bin","rb")
+	clientes = pickle.load(archivo)
+	archivo.close()
+	
+except:
+	print("No existe archivo de datos")
+
+while True:
+	archivo = open('clientes.bin','wb')
+	pickle.dump(clientes,archivo)
+	archivo.close()
+	
+	print("Escoge una opción:")
+	print("1.-Insertar un cliente")
+	print("2.-Listar clientes")
+	print("3.-Actualizar un cliente")
+	print("4.-Eliminar un cliente")
+	print("5.-Salir")
+	opcion = int(input("Escoge una opcion: "))
+	
+	if opcion == 1:
+		nombre = input("Introduce el nombre del cliente: ")
+		apellidos = input("Introduce los apellidos del cliente: ")
+		email = input("Introduce el email del cliente: ")
+		clientes.append(Cliente(nombre, apellidos, email))
+		
+	elif opcion == 2:
+		identificador = 0
+		for cliente in clientes:
+			print("#######################")
+			print("Este es el cliente con ID:", identificador)
+			print(cliente.nombre)
+			print(cliente.email)
+			print(cliente.apellidos)
+			print("#######################")
+			identificador += 1
+			
+	elif opcion == 3:
+		identificador = int(input("Introduce el id para modificar: "))
+		nombre = input("Introduce el nombre del cliente: ")
+		apellidos = input("Introduce los apellidos del cliente: ")
+		email = input("Introduce el email del cliente: ")
+		clientes[identificador].nombre = nombre
+		clientes[identificador].apellidos = apellidos
+		clientes[identificador].email = email
+		
+	elif opcion == 4:
+		identificador = int(input("Introduce el id para eliminar: "))
+		confirmacion = input("¿Estas seguro? (S/N): ").lower()
+		if confirmacion == "s":
+			clientes.pop(identificador)
+		elif confirmacion == "n":
+			print("Cancelado")
+		else:
+			print("Opción no valida")
+	
+	elif opcion == 5:
+		break
+

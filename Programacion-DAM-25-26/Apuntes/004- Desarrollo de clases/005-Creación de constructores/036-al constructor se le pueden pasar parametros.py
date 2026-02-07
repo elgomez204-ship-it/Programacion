@@ -1,0 +1,14 @@
+class Gato():
+	def __init__(self):
+		self.edad = 0
+		
+	def maulla(self):
+		return "El gato esta maullando"
+		
+
+gato1 = Gato()
+print(gato1.edad)
+gato1.edad = 5
+print(gato1.edad)
+
+print(gato1.maulla())
